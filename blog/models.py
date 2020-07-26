@@ -5,7 +5,7 @@ from django.urls import reverse
 # Create your models here.
 class PulishedManager(models.Manager):
     def get_queryset(self):
-        return super(PulishedManager,self).get_queryset().filter(status='published')
+        return super(PulishedManager,self).get_queryset().filter(status='published')#filter by status
 class Post(models.Model):
     STATUS_CHOICES=(
         ('draft','Draft'),
